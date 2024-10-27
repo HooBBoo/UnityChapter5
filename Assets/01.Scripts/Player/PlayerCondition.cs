@@ -6,54 +6,47 @@ using UnityEngine;
 public interface IDamagable
 {
     void TakePhysicalDamage(int damage);
+    void TakeMentalDamage(int damage);
 }
 
-public class PlayerCondition : MonoBehaviour, IDamagable
-{
-    public UICondition uiCondition;
-
-    Condition health { get { return uiCondition.health; } }
-    Condition hunger { get { return uiCondition.hunger; } }
-    Condition stamina { get { return uiCondition.stamina; } }
-
-    public float noHungerHealthDecay;
-
-    public event Action onTakeDamage;
-
-    void Update()
+    public class PlayerCondition : MonoBehaviour, IDamagable
     {
-        hunger.Subtract(hunger.passiveValue * Time.deltaTime);
-        stamina.Add(stamina.passiveValue * Time.deltaTime);
+        public UICondition uiCondition;
 
-        if (hunger.curValue == 0f)
+        Condition health { get { return uiCondition.health; } }
+        Condition mentalHealth { get { return uiCondition.mentalHealth; } }
+
+        public float noMentalHealthDecay;
+
+        public event Action onTakeDamage;
+
+        void Update()
         {
-            health.Subtract(noHungerHealthDecay * Time.deltaTime);
+            if (mentalHealth.curValue == 0f)
+            {
+                health.Subtract(noMentalHealthDecay * Time.deltaTime);
+            }
+
+            if (health.curValue == 0f)
+            {
+                Die();
+            }
         }
 
-        if (health.curValue == 0f)
+        public void TakePhysicalDamage(int damage)
         {
-            Die();
+            health.Subtract(damage);
+            onTakeDamage?.Invoke();
+        }
+
+        public void TakeMentalDamage(int damage)
+        {
+            mentalHealth.Subtract(damage);
+            onTakeDamage?.Invoke();
+        }
+
+        public void Die()
+        {
+            Debug.Log("±û²¿´Ú Á×¾ú´Ù");
         }
     }
-
-    public void Heal(float amount)
-    {
-        health.Add(amount);
-    }
-
-    public void Eat(float amount)
-    {
-        hunger.Add(amount);
-    }
-
-    public void Die()
-    {
-        Debug.Log("±û²¿´Ú Á×¾ú´Ù");
-    }
-
-    public void TakePhysicalDamage(int damage)
-    {
-        health.Subtract(damage);
-        onTakeDamage?.Invoke();
-    }
-}

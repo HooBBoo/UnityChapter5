@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamagableObject : MonoBehaviour
 {
-    public int damage;
+    public int mentalDamage;
     public float damageRate;
 
     List<IDamagable> things = new List<IDamagable>();
@@ -19,7 +19,7 @@ public class DamagableObject : MonoBehaviour
     {
         for (int i = 0; i < things.Count; i++)
         {
-            things[i].TakePhysicalDamage(damage);       
+            things[i].TakePhysicalDamage(mentalDamage);       
         }
     }
 
