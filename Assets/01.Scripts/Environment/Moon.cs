@@ -45,12 +45,5 @@ public class DayNightCycle : MonoBehaviour
         lightSource.transform.eulerAngles = (time - 0.75f) * noon * 4.0f;
         lightSource.color = colorGradient.Evaluate(time);
         lightSource.intensity = intensity;
-
-        // 달이 완전히 어두워질 때는 비활성화
-        GameObject go = lightSource.gameObject;
-        if (intensity == 0 && go.activeInHierarchy)
-            go.SetActive(false);
-        else if (intensity > 0 && !go.activeInHierarchy)
-            go.SetActive(true);
     }
 }
