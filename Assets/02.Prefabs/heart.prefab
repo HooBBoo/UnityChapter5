@@ -248,10 +248,10 @@ GameObject:
   - component: {fileID: 177765534706338045}
   - component: {fileID: 1712435760606818753}
   - component: {fileID: 7280877552539705010}
-  - component: {fileID: 7290995461127131107}
   - component: {fileID: 6983501390263132292}
   - component: {fileID: 5994453239693362609}
   - component: {fileID: 9035562239041409859}
+  - component: {fileID: 1097844795937517173}
   m_Layer: 8
   m_Name: heart
   m_TagString: Untagged
@@ -348,27 +348,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8087458221035121081, guid: 2a7d3d8c7215fa44ba54e89a9c1ba1ce, type: 3}
---- !u!95 &7290995461127131107
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776091089777952426}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 100323e114905b245a12b6094d041ead, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6983501390263132292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,4 +402,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDamage: 100
   mentalDamage: 0
-  damageRate: 0
+  damageRate: 1
+--- !u!95 &1097844795937517173
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776091089777952426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 100323e114905b245a12b6094d041ead, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
