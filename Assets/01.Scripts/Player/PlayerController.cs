@@ -32,15 +32,15 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked; // 커서 보이지 않게
     }
 
-    void FixedUpdate()
+    void FixedUpdate() // 물리연산(rigid body)을 사용할 때에는 일정한 간격으로 업데이트 되어야 해서 (일정한 움직임?)
     {
         Move();
     }
 
-    private void LateUpdate()
+    private void LateUpdate() // 모든 Update가 완료된 후 최종적으로 따라가게 하기 위해. 카메라가 제일 마지막으로.
     {
         if (canLook)
         {

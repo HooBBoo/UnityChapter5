@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         CharacterManager.Instance.player = this;
-        controller = GetComponent<PlayerController>();
-        condition = GetComponent<PlayerCondition>();
+        controller = GetComponent<PlayerController>(); //기능 제어
+        condition = GetComponent<PlayerCondition>(); //상태
     }
 }

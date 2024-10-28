@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a7cf2af051ae044b55f1687d37b8da, type: 3}
   m_Name: IObject_Gravestone2
   m_EditorClassIdentifier: 
-  displayName: "[\uC7A0\uC740 \uC8FD\uC5B4\uC11C]"
-  description: "\uD3C9\uADE0 \uC218\uBA74\uC2DC\uAC04 3\uC2DC\uAC04"
+  displayName: "[\uAE40\uBBFC\uC815]"
+  description: Rest In Piece of cake
   type: 0
   icon: {fileID: 0}
   dropPrefab: {fileID: 0}
