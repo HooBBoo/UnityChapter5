@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamagableObject : MonoBehaviour
 {
+    public int healthDamage;
     public int mentalDamage;
     public float damageRate;
 
@@ -11,15 +12,28 @@ public class DamagableObject : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("DealDamge", 0, damageRate);
+        InvokeRepeating("DealDamage", 0, damageRate);
     }
 
-    // Update is called once per frame
-    void DealDamge()
+    void DealDamage()
+    {
+        HealthDamage();
+        MentalHealthDamage();
+    }
+
+    void HealthDamage()
     {
         for (int i = 0; i < things.Count; i++)
         {
-            things[i].TakePhysicalDamage(mentalDamage);       
+            things[i].TakePhysicalDamage(healthDamage);       
+        }
+    }
+
+    void MentalHealthDamage()
+    {
+        for (int i = 0; i < things.Count; i++)
+        {
+            things[i].TakeMentalDamage(mentalDamage);
         }
     }
 

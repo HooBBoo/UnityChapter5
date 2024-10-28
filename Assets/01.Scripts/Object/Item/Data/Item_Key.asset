@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a7cf2af051ae044b55f1687d37b8da, type: 3}
   m_Name: Item_Key
   m_EditorClassIdentifier: 
-  displayName: "\uC5F4\uC1E0"
-  description: Gold Key
+  displayName: "[\uC5F4\uC1E0]"
+  description: "\uBE5B\uB098\uB294 \uC5F4\uC1E0"
   type: 0
   icon: {fileID: 0}
   dropPrefab: {fileID: 0}
