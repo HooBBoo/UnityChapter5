@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1840511490817266150}
   - component: {fileID: 6811312502290366744}
   - component: {fileID: 5048365970389721116}
-  m_Layer: 0
+  - component: {fileID: 8271816940911434653}
+  m_Layer: 8
   m_Name: key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3727955133696556660}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.9178474, y: 1.8796016, z: -2.7442398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -83,3 +84,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8271816940911434653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3727955133696556660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee686bc0f3bed1f41876cbd7a2c8a28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

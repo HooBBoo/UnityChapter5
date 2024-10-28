@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a7cf2af051ae044b55f1687d37b8da, type: 3}
   m_Name: Item_Key
   m_EditorClassIdentifier: 
-  displayName: Key
+  displayName: "\uC5F4\uC1E0"
   description: Gold Key
   type: 0
   icon: {fileID: 0}
