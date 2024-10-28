@@ -51,7 +51,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "UseItem",
                     "type": "Button",
                     "id": "ed263468-802d-4e05-aabd-388d93a5ab4d",
                     "expectedControlType": "Button",
@@ -163,11 +163,11 @@
                 {
                     "name": "",
                     "id": "d64dc4ea-c998-43e8-94ab-e1f49bbec6a1",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "UseItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
