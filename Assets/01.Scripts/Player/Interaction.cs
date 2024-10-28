@@ -33,14 +33,16 @@ public class Interaction : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxCheckDistance, layerMask))
             {
-                if (hit.collider.gameObject != curInteractGameObject)
+                var interactable = hit.collider.GetComponent<IInteractable>();
+
+                if (interactable != null && interactable != curInteractable)
                 {
-                    Debug.Log("레이 맞음!");
                     curInteractGameObject = hit.collider.gameObject;
-                    curInteractable = hit.collider.GetComponent<IInteractable>();
+                    curInteractable = interactable;
                     SetPromptText();
                 }
             }
+
             else //빈 공간에 레이 쏠 때
             {
                 curInteractGameObject = null;
@@ -52,8 +54,11 @@ public class Interaction : MonoBehaviour
 
     private void SetPromptText()
     {
-        promptText.gameObject.SetActive(true);
-        promptText.text = curInteractable.GetInteractPrompt();
+        if (curInteractable != null)
+        {
+            promptText.gameObject.SetActive(true);
+            promptText.text = curInteractable.GetInteractPrompt();
+        }
     }
 
     public void OnInteractInput(InputAction.CallbackContext context)

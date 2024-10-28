@@ -18,3 +18,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   dropPrefab: {fileID: 0}
   consumables: []
+  canBeInteracted: 1
+  interactPrompt: "[E]\uD0A4\uB97C \uB20C\uB7EC \uD6D4\uCE58\uC138\uC694!"

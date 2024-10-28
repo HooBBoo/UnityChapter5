@@ -5,7 +5,8 @@ using UnityEngine;
 public enum ItemType
 {
     Misc,
-    Consumable
+    Consumable,
+    //Equipable 고민중
 }
 
 public enum ConsumableType
@@ -33,4 +34,11 @@ public class ItemData : ScriptableObject
 
     [Header("Consumable")]
     public ItemDataConsumable[] consumables;
+
+    [Header("Interaction")]
+    public bool canBeInteracted; // 상호작용 가능 여부 설정
+    public string interactPrompt;
+
+    //[Header("Equip")]
+    //public GameObject equipPrefab;
 }
