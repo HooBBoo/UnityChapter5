@@ -13,6 +13,7 @@ public class Interaction : MonoBehaviour
 
     public GameObject curInteractGameObject; //인터렉션 된 게임 오브젝트의 정보
     private IInteractable curInteractable;
+    private IConsumable curConsumable;
 
     public TextMeshProUGUI promptText;
     private Camera camera;
@@ -28,25 +29,34 @@ public class Interaction : MonoBehaviour
         {
             lastCheckTime = Time.time;
 
-            Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));  //정중앙에서 쏘려고 스크린 너비,높이의 반
-            RaycastHit hit;  //부딪힌 오브젝트
+            Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+            RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, maxCheckDistance, layerMask))
             {
                 var interactable = hit.collider.GetComponent<IInteractable>();
+                var consumable = hit.collider.GetComponent<IConsumable>();
 
                 if (interactable != null && interactable != curInteractable)
                 {
                     curInteractGameObject = hit.collider.gameObject;
                     curInteractable = interactable;
+                    curConsumable = null; // 기존 소비 가능 아이템 초기화
+                    SetPromptText();
+                }
+                else if (consumable != null && consumable != curConsumable)
+                {
+                    curInteractGameObject = hit.collider.gameObject;
+                    curConsumable = consumable;
+                    curInteractable = null; // 기존 상호작용 아이템 초기화
                     SetPromptText();
                 }
             }
-
-            else //빈 공간에 레이 쏠 때
+            else
             {
                 curInteractGameObject = null;
                 curInteractable = null;
+                curConsumable = null;
                 promptText.gameObject.SetActive(false);
             }
         }
@@ -59,6 +69,15 @@ public class Interaction : MonoBehaviour
             promptText.gameObject.SetActive(true);
             promptText.text = curInteractable.GetInteractPrompt();
         }
+        else if (curConsumable != null)
+        {
+            promptText.gameObject.SetActive(true);
+            promptText.text = curConsumable.GetConsumePrompt();
+        }
+        else
+        {
+            promptText.gameObject.SetActive(false);
+        }
     }
 
     public void OnInteractInput(InputAction.CallbackContext context)
@@ -68,6 +87,16 @@ public class Interaction : MonoBehaviour
             curInteractable.OnInteract();
             curInteractGameObject = null;
             curInteractable = null;
+            promptText.gameObject.SetActive(false);
+        }
+    }
+
+    public void OnConsumeInput(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started && curConsumable != null)
+        {
+            curConsumable.OnConsume();
+            curConsumable = null;
             promptText.gameObject.SetActive(false);
         }
     }

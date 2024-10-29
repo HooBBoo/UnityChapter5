@@ -16,7 +16,7 @@ public class ItemObject : MonoBehaviour, IInteractable
         string str = $"{data.displayName}\n{data.description}";
         if (data.canBeInteracted) // Item data에서 상호작용 가능 여부와 프롬프트 확인
         {
-            str += $"\n{data.interactPrompt}";
+            str += $"\n\n{data.interactPrompt}";
         }
         return str;
     }

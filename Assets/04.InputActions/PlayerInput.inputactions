@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "UseItem",
+                    "name": "Consume",
                     "type": "Button",
                     "id": "ed263468-802d-4e05-aabd-388d93a5ab4d",
                     "expectedControlType": "Button",
@@ -147,7 +147,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "UseItem",
+                    "action": "Consume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

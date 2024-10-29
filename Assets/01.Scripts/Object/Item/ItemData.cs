@@ -28,11 +28,11 @@ public class ItemData : ScriptableObject
     public string displayName;
     public string description;
     public ItemType type;
-    public Sprite icon;
     public GameObject dropPrefab;
 
     [Header("Consumable")]
     public bool Consumable; // 소비 가능 여부 설정
+    public ItemDataConsumable consumable;
     public string ConsumablePrompt;
 
     [Header("Interaction")]

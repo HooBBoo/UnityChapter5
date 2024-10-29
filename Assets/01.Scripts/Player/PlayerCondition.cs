@@ -18,7 +18,19 @@ public interface IDamagable
 
         public float noMentalHealthDecay;
 
-        public event Action onTakeDamage;
+        public float curMentalHealth = 300f; // 현재 정신 건강 수치
+        public float maxMentalHealth = 500f; // 최대 정신 건강 수치
+
+        public event Action onApplyBlessing;
+
+    public void IncreaseMentalHealth(float value)
+        {
+        mentalHealth.Add(value);
+        Debug.Log($"현재 정신 건강: {mentalHealth.curValue}");
+        onApplyBlessing?.Invoke();
+    }
+
+    public event Action onTakeDamage;
 
         void Update()
         {

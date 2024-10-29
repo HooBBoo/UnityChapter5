@@ -12,7 +12,7 @@ public class Blessing : MonoBehaviour
 
     void Start()
     {
-        //CharacterManager.Instance.player.condition.onApplyBlessing += Bless;
+        CharacterManager.Instance.player.condition.onApplyBlessing += Bless;
     }
 
     public void Bless()

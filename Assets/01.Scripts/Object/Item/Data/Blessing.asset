@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: "[\uC5FC\uC608\uCC2C\uD29C\uD130\uB2D8\uC758 \uAC00\uD638]"
   description: "\uC815\uC2E0\uC774 \uAC74\uAC15\uD574\uC9C4\uB2E4."
-  type: 0
-  icon: {fileID: 0}
+  type: 1
   dropPrefab: {fileID: 0}
-  Consumable: 0
-  ConsumablePrompt: 
-  canBeInteracted: 1
-  interactPrompt: "[R]\uD0A4\uB97C \uB20C\uB7EC \uAC00\uD638\uB97C \uBC1B\uC73C\uC138\uC694"
+  Consumable: 1
+  consumable:
+    type: 1
+    value: 100
+  ConsumablePrompt: "[R]\uD0A4\uB97C \uB20C\uB7EC \uAC00\uD638\uB97C \uBC1B\uC73C\uC138\uC694"
+  canBeInteracted: 0
+  interactPrompt: 
