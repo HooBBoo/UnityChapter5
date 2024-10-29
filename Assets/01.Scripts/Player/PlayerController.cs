@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = transform.forward * curMovementInput.y + transform.right * curMovementInput.x;
         dir *= moveSpeed;
         dir.y = _rigidbody.velocity.y;
-
+        Debug.Log(dir);
         _rigidbody.velocity = dir;
     }
 

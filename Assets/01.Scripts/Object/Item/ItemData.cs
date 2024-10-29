@@ -32,7 +32,8 @@ public class ItemData : ScriptableObject
     public GameObject dropPrefab;
 
     [Header("Consumable")]
-    public ItemDataConsumable[] consumables;
+    public bool Consumable; // 소비 가능 여부 설정
+    public string ConsumablePrompt;
 
     [Header("Interaction")]
     public bool canBeInteracted; // 상호작용 가능 여부 설정
