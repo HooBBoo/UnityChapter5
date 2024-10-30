@@ -23,7 +23,7 @@
 
 
 ## ⏲️ 개발 기간
-- 2024.10.23(수) ~ 2024.10.30(수)
+- 2024.10.26(토) ~ 2024.10.30(수)
 ***
 ![GraveStones](https://github.com/HooBBoo/UnityChapter5/blob/main/GraveStones.png)
 ![씨앗 찾기](https://github.com/HooBBoo/UnityChapter5/blob/main/02Readme.png)
