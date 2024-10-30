@@ -6,6 +6,7 @@
 2. [주요 기능](#주요-기능)
 3. [개발 기간](#개발-기간)
 4. [이미지](#이미지)
+5. [트러블슈팅](#트러블슈팅)
     
 ## 🎃 프로젝트 소개
 공동묘지 만들기
@@ -27,3 +28,7 @@
 ![GraveStones](https://github.com/HooBBoo/UnityChapter5/blob/main/GraveStones.png)
 ![씨앗 찾기](https://github.com/HooBBoo/UnityChapter5/blob/main/02Readme.png)
 ![튜터님의 가호](https://github.com/HooBBoo/UnityChapter5/blob/main/01Readme.png)
+***
+
+## 🎇 트러블슈팅관련 TIL
+<https://hungry-always.tistory.com/85>
