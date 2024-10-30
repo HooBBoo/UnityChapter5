@@ -24,5 +24,5 @@
 - 2024.10.23(수) ~ 2024.10.30(수)
 ***
 ![GraveStones](https://github.com/HooBBoo/UnityChapter5/blob/main/GraveStones.png)
-![튜터님의 가호](https://github.com/HooBBoo/UnityChapter5/blob/main/01Readme.png)
 ![씨앗 찾기](https://github.com/HooBBoo/UnityChapter5/blob/main/02Readme.png)
+![튜터님의 가호](https://github.com/HooBBoo/UnityChapter5/blob/main/01Readme.png)
